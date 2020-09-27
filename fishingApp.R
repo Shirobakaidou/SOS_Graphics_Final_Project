@@ -318,7 +318,7 @@ server <- function(input, output, session){
       for (i in 1:length(raster_all_gear)){
         
         # Crop raster by selected MPA
-        raster_extract <- extract(raster(raster_all_gear$raster_paths[i]), mpa_sub)
+        raster_extract <- extract(raster(as.character(raster_all_gear$raster_paths[i])), mpa_sub)
         raster_unlist <- raster_extract %>% unlist()
         
         # Sum of fishing hours in the specified MPA
