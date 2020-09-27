@@ -17,8 +17,8 @@ eez <- readOGR("./EEZ_bounding_box/SA_EEZ_BoundingBox.shp")
 # Get File containing paths to raster layers of annaual fishing activity of every year and gear type
 raster_paths <- read.csv("./raster_paths.csv")
 str(raster_paths)
-#raster_paths$year <- as.factor(raster_paths$year)
-#raster_paths$fishing_type <- as.factor(raster_paths$fishing_type)
+raster_paths$year <- as.factor(raster_paths$year)
+raster_paths$fishing_type <- as.factor(raster_paths$fishing_type)
 
 # Get File of Statistics of the fishing activity
 fishery_stat <- read.csv("./fishery_stat.csv")
